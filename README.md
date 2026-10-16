@@ -1,5 +1,7 @@
 # ✳ Sproutfile
 
+[![Checks](https://github.com/varadganjoo/sproutfile/actions/workflows/ci.yml/badge.svg)](https://github.com/varadganjoo/sproutfile/actions/workflows/ci.yml)
+
 ### What if an AI output could keep a tiny promise?
 
 An agent makes you a plan. The world changes. The plan usually just sits there.

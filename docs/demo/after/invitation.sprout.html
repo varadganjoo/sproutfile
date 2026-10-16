@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>An invitation that can change its mind · Sproutfile</title>
+<style>
+:root{color-scheme:light;--ink:#173f35;--paper:#f3f2e9;--line:#d3dbce;--green:#2c6651}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 system-ui,sans-serif}
+main{max-width:1000px;margin:auto;padding:56px 28px 80px}header{border-bottom:2px solid var(--ink);padding-bottom:36px}
+.brand,.eyebrow{font:12px/1.6 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.14em}.brand{display:flex;justify-content:space-between;gap:20px}
+h1{font:clamp(42px,7vw,78px)/1.05 Georgia,serif;letter-spacing:-.04em;margin:32px 0 20px}h2{font:29px/1.2 Georgia,serif;margin:8px 0 18px}
+.goal{max-width:650px;font-size:20px}.muted,time,.pending{color:#587368;font-size:13px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,350px),1fr));gap:20px;margin:30px 0}
+section{background:#fffef8;border:1px solid var(--line);border-radius:12px;padding:26px;min-width:0}.value{white-space:pre-wrap;overflow-wrap:anywhere;font-size:19px}
+details{border-top:1px solid var(--line);padding-top:12px;margin-top:18px}summary{cursor:pointer;font-size:13px;font-weight:600}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.6 ui-monospace,monospace;background:#eaf0e6;padding:16px;border-radius:6px}
+table{width:100%;border-collapse:collapse;font-size:14px;overflow-wrap:anywhere}th,td{text-align:left;border-bottom:1px solid var(--line);padding:10px 4px}ol{padding-left:20px}li{padding:12px 0}time{display:block}footer{border-top:1px solid var(--line);padding-top:20px;margin-top:36px;font-size:13px}
+</style></head><body><main>
+<header><div class="brand"><span>✳ sproutfile / a small living file</span><span>snapshot 2</span></div>
+<h1>An invitation that can change its mind</h1><p class="goal">Keep a draft invitation consistent with the venue and packing list. Never send it.</p>
+<p class="muted">Last refreshed: 2026-10-16T07:58:35+00:00. This is a snapshot; updates require the runtime or an agent. No code runs when you open this file.</p></header>
+<div class="grid"><section><div class="eyebrow">template / message</div><h2>Draft, not sent</h2><p class="value">Tiny expedition update: meet at Moss Library (indoors). Bring: Board games, mugs, and the suspicious spoon. Leave the blanket at home. See you Saturday!</p><details><summary>Why is this here?</summary><pre>[
+  {
+    &quot;input&quot;: &quot;kit&quot;,
+    &quot;ref&quot;: {
+      &quot;pointer&quot;: &quot;/blocks/kit/value&quot;,
+      &quot;source&quot;: &quot;packing&quot;
+    },
+    &quot;hash&quot;: &quot;44f21355965f18fa46266878ac5adf08fcdeba499cdc90ebdd44775717c61082&quot;
+  },
+  {
+    &quot;input&quot;: &quot;place&quot;,
+    &quot;ref&quot;: {
+      &quot;pointer&quot;: &quot;/blocks/place/value&quot;,
+      &quot;source&quot;: &quot;plan&quot;
+    },
+    &quot;hash&quot;: &quot;ca146d69cb4c9679d41d733583668072a31e812ee24d393393a2f4111db54cb5&quot;
+  }
+]</pre><p class="muted">Last changed 2026-10-16T07:58:35+00:00</p></details></section></div>
+<details><summary>What changed? (2 retained updates)</summary><ol><li><time>2026-10-16T07:58:35+00:00</time> Source-bound refresh: message<details><summary>Inspect the change</summary><pre>{
+  &quot;message&quot;: {
+    &quot;after&quot;: &quot;Tiny expedition update: meet at Moss Library (indoors). Bring: Board games, mugs, and the suspicious spoon. Leave the blanket at home. See you Saturday!&quot;,
+    &quot;before&quot;: &quot;Tiny expedition update: meet at Fern Park (outdoors). Bring: Blanket, sunscreen, cups, and the suspicious spoon. See you Saturday!&quot;
+  }
+}</pre></details></li><li><time>2026-10-16T07:58:35+00:00</time> Source-bound refresh: message<details><summary>Inspect the change</summary><pre>{
+  &quot;message&quot;: {
+    &quot;after&quot;: &quot;Tiny expedition update: meet at Fern Park (outdoors). Bring: Blanket, sunscreen, cups, and the suspicious spoon. See you Saturday!&quot;,
+    &quot;before&quot;: null
+  }
+}</pre></details></li></ol></details>
+<details><summary>Purpose, sources & continuation recipe</summary><pre>{
+  &quot;blocks&quot;: [
+    {
+      &quot;id&quot;: &quot;message&quot;,
+      &quot;inputs&quot;: {
+        &quot;kit&quot;: {
+          &quot;pointer&quot;: &quot;/blocks/kit/value&quot;,
+          &quot;source&quot;: &quot;packing&quot;
+        },
+        &quot;place&quot;: {
+          &quot;pointer&quot;: &quot;/blocks/place/value&quot;,
+          &quot;source&quot;: &quot;plan&quot;
+        }
+      },
+      &quot;kind&quot;: &quot;template&quot;,
+      &quot;label&quot;: &quot;Draft, not sent&quot;,
+      &quot;text&quot;: &quot;Tiny expedition update: meet at ${place}. Bring: ${kit} See you Saturday!&quot;
+    }
+  ],
+  &quot;goal&quot;: &quot;Keep a draft invitation consistent with the venue and packing list. Never send it.&quot;,
+  &quot;sources&quot;: {
+    &quot;packing&quot;: &quot;packing.sprout.html&quot;,
+    &quot;plan&quot;: &quot;picnic.sprout.html&quot;
+  },
+  &quot;title&quot;: &quot;An invitation that can change its mind&quot;
+}</pre>
+<p>To continue this file: inspect its recipe, trust only the local sources you intend, then run sprout refresh. Agent blocks accept source-bound proposals through sprout jobs / sprout submit.</p></details>
+<footer>A readable file with a future. Source hashes and recipes travel with it; local permissions do not. Sproutfile 0.1 · experimental</footer>
+</main><script id="sprout-state" type="application/json">{"format":"sprout/0.1","manifest":{"blocks":[{"id":"message","inputs":{"kit":{"pointer":"/blocks/kit/value","source":"packing"},"place":{"pointer":"/blocks/place/value","source":"plan"}},"kind":"template","label":"Draft, not sent","text":"Tiny expedition update: meet at ${place}. Bring: ${kit} See you Saturday!"}],"goal":"Keep a draft invitation consistent with the venue and packing list. Never send it.","sources":{"packing":"packing.sprout.html","plan":"picnic.sprout.html"},"title":"An invitation that can change its mind"},"state":{"blocks":{"message":{"input_hashes":{"kit":"44f21355965f18fa46266878ac5adf08fcdeba499cdc90ebdd44775717c61082","place":"ca146d69cb4c9679d41d733583668072a31e812ee24d393393a2f4111db54cb5"},"signature":"c11bc6556095d255817a5b3a0fc44026d8e2be57ef24dc7ea12b4581844de46e","updated":"2026-10-16T07:58:35+00:00","value":"Tiny expedition update: meet at Moss Library (indoors). Bring: Board games, mugs, and the suspicious spoon. Leave the blanket at home. See you Saturday!"}},"history":[{"changes":{"message":{"after":"Tiny expedition update: meet at Fern Park (outdoors). Bring: Blanket, sunscreen, cups, and the suspicious spoon. See you Saturday!","before":null}},"reason":"Source-bound refresh: message","time":"2026-10-16T07:58:35+00:00"},{"changes":{"message":{"after":"Tiny expedition update: meet at Moss Library (indoors). Bring: Board games, mugs, and the suspicious spoon. Leave the blanket at home. See you Saturday!","before":"Tiny expedition update: meet at Fern Park (outdoors). Bring: Blanket, sunscreen, cups, and the suspicious spoon. See you Saturday!"}},"reason":"Source-bound refresh: message","time":"2026-10-16T07:58:35+00:00"}],"revision":2,"updated":"2026-10-16T07:58:35+00:00"}}</script></body></html>

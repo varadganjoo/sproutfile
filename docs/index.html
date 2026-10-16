@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; frame-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Sproutfile — a readable file with a future</title><style>
+:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;color:#173f35;background:#f3f2e9;font:17px/1.6 system-ui,sans-serif}main{max-width:1180px;margin:auto;padding:52px 24px 80px}nav{display:flex;justify-content:space-between;font:13px ui-monospace,monospace}a{color:inherit}h1{font:clamp(46px,7vw,84px)/1.05 Georgia,serif;letter-spacing:-.04em;max-width:900px;margin:50px 0 22px}.intro{max-width:720px;font-size:21px}img{width:100%;height:auto;display:block;margin:32px 0}.notes{color:#587368;font-size:14px;max-width:800px}.snapshots{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}.panel{min-width:0}.panel h2{font:28px Georgia,serif}.panel a{font-size:14px}iframe{width:100%;height:670px;border:1px solid #d3dbce;border-radius:14px;background:#fffef8}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#173f35;color:#fffef8;padding:22px;border-radius:12px;font:14px/1.7 ui-monospace,monospace}.links{display:flex;gap:24px;flex-wrap:wrap;margin:24px 0}footer{border-top:1px solid #d3dbce;padding-top:20px;margin-top:40px;font-size:14px}@media(max-width:780px){.snapshots{grid-template-columns:1fr}iframe{height:580px}h1{margin-top:36px}}
+</style></head><body><main>
+<nav><span>✳ SPROUTFILE / EXPERIMENT 0.1</span><a href="https://github.com/varadganjoo/sproutfile">Code on GitHub ↗</a></nav>
+<h1>What if an AI output could keep a tiny promise?</h1>
+<p class="intro">We gave a picnic plan sources, an update recipe, and a future. Then we made it rain.</p>
+<p class="notes">These are real snapshots produced by the local runtime using fictional data. This page is read-only: opening a file does not start an agent or refresh it.</p>
+<img src="cascade.svg" alt="Rain changes from 10% to 90%. The venue, packing list, and invitation draft follow. Zero model calls or network calls in the deterministic demo.">
+<div class="snapshots">
+<div class="panel"><h2>Before the rain</h2><p><a href="demo/before/invitation.sprout.html">Open the original file ↗</a></p><iframe title="Original invitation, outdoors at Fern Park" sandbox src="demo/before/invitation.sprout.html"></iframe></div>
+<div class="panel"><h2>After the rain</h2><p><a href="demo/after/invitation.sprout.html">Open the refreshed file ↗</a></p><iframe title="Refreshed invitation, indoors at Moss Library" sandbox src="demo/after/invitation.sprout.html"></iframe></div>
+</div>
+<h2>Try changing its world yourself</h2>
+<pre>git clone https://github.com/varadganjoo/sproutfile.git
+cd sproutfile
+python -m sproutfile demo
+python -m sproutfile --root sprout-demo watch invitation.sprout.html</pre>
+<p>Requires Python 3.11+. Edit <code>sprout-demo/weather.json</code> and set <code>rain_chance</code> to <code>0.1</code>. Reload the generated files to see them return outdoors. Stop the watcher with Ctrl+C.</p>
+<p>The demo uses rules and templates. For generated prose, the file emits a job that any capable agent can continue; proposals for stale input hashes are rejected. The runtime also has an opt-in Ollama adapter, currently unverified with live inference.</p>
+<div class="links"><a href="https://github.com/varadganjoo/sproutfile/blob/main/docs/AGENT_PROTOCOL.md">Continue a file with an agent ↗</a><a href="https://github.com/varadganjoo/sproutfile/blob/main/docs/PRIOR_ART.md">Prior art and the bet ↗</a><a href="https://github.com/varadganjoo/sproutfile/blob/main/docs/LIMITS.md">Current limits ↗</a></div>
+<footer>Source-bound updates, portable recipes, separate local permissions. MIT licensed. No novelty or breakthrough claim. Currently a garden shed containing one very determined picnic.</footer>
+</main></body></html>
