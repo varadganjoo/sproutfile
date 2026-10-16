@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+.sprout-grants.json
+.sprout.lock
+sprout-demo/
+.qa/
+.env
+.env.*
+!.env.example

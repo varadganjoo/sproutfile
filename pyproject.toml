@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sproutfile"
+version = "0.1.0"
+description = "AI outputs that carry their own continuation: portable, source-bound living files."
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Varad Ganjoo"}]
+dependencies = []
+
+[project.scripts]
+sprout = "sproutfile.cli:main"
+
+[project.urls]
+Repository = "https://github.com/varadganjoo/sproutfile"
+
+[tool.setuptools.packages.find]
+include = ["sproutfile*"]

@@ -1,0 +1,18 @@
+{
+  "title": "A small note with a future",
+  "goal": "Keep a friendly picnic update consistent with the supplied facts. Never send the update.",
+  "sources": {"facts": "facts.json"},
+  "blocks": [
+    {
+      "id": "update",
+      "kind": "agent",
+      "label": "The latest draft",
+      "prompt": "Write two short, warm sentences announcing the current venue and explaining why it was selected. Use only the venue and reason inputs. Do not invent a date, time, people, or a booking.",
+      "inputs": {
+        "venue": {"source": "facts", "pointer": "/venue"},
+        "reason": {"source": "facts", "pointer": "/reason"}
+      },
+      "max_length": 400
+    }
+  ]
+}
