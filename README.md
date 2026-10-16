@@ -10,6 +10,8 @@ An agent makes you a plan. The world changes. The plan usually just sits there.
 
 Today we are teaching a picnic to survive rain. Please calibrate your expectations accordingly.
 
+**[See the before / after preview →](https://varadganjoo.github.io/sproutfile/)**
+
 ![A change in the forecast propagates through three readable files](docs/cascade.svg)
 
 ## Try the ridiculous little demo
